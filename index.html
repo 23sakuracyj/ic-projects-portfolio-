@@ -8,10 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- React & ReactDOM -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
-    <!-- Babel -->
+    <!-- Babel (for in-browser JSX) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
 
@@ -24,7 +24,17 @@
       /* -------------------------
          ProjectCard Component
       --------------------------*/
-      const ProjectCard = ({ number, title, subtitle, metrics, tags, status, statusColor, delay }) => {
+      const ProjectCard = ({
+        number,
+        title,
+        subtitle,
+        metrics,
+        tags,
+        status,
+        statusColor,
+        delay,
+        link,
+      }) => {
         const [isVisible, setIsVisible] = useState(false);
 
         useEffect(() => {
@@ -60,7 +70,10 @@
 
             <div className="px-5 py-3 flex flex-wrap gap-1.5">
               {tags.map((tag, i) => (
-                <span key={i} className="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium">
+                <span
+                  key={i}
+                  className="px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium"
+                >
                   {tag}
                 </span>
               ))}
@@ -69,11 +82,23 @@
             <div className="px-5 py-3 flex items-center justify-between border-t border-gray-100">
               <span className={`text-sm font-medium flex items-center gap-1.5 ${statusColor}`}>
                 {status === "In Progress" ? (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 20 20">
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
                     <circle cx="10" cy="10" r="7" />
                   </svg>
                 ) : (
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    aria-hidden="true"
+                  >
                     <path
                       fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -83,16 +108,23 @@
                 )}
                 {status}
               </span>
-              <button className="px-4 py-1.5 bg-gray-800 text-white text-xs font-medium rounded hover:bg-gray-700 transition-colors">
+
+              {/* IMPORTANT: Use <a> so the link works on GitHub Pages */}
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-1.5 bg-gray-800 text-white text-xs font-medium rounded hover:bg-gray-700 transition-colors"
+              >
                 VIEW DETAILS →
-              </button>
+              </a>
             </div>
           </div>
         );
       };
 
       /* -------------------------
-         Main Profile Component
+         Main Portfolio Component
       --------------------------*/
       const Portfolio = () => {
         const [headerVisible, setHeaderVisible] = useState(false);
@@ -107,101 +139,111 @@
         // Re-ordered for IC applications:
         // 1) Memory/CIM  2) Digital IC (layout)  3) Analog IC (layout)  4) System interface (AXI/SPI)
         const projects = [
-  {
-    number: 1,
-    title: "16×16 6T SRAM Compute-in-Memory",
-    subtitle: "Low-voltage CIM with conditional write-back, WFSC, and synchronous write-assist",
-    metrics: [
-      { value: "16×16", label: "ARRAY" },
-      { value: "≤10 mW", label: "WRITE PWR" },
-      { value: "<10 MHz", label: "FREQ" },
-    ],
-    tags: [
-      "6T SRAM",
-      "CIM",
-      "Conditional Write-Back",
-      "WFSC",
-      "Neg. Bitline Assist",
-      "SA + Compare Array",
-      "TSMC 180nm",
-      "HSPICE/Spectre",
-    ],
-    status: "In Progress",
-    statusColor: "text-amber-600",
-    delay: 200,
-    link: "https://github.com/YOUR_USERNAME/ic-projects-portfolio/tree/main/6T%20SRAM%20CIM%20Array",
-  },
-  {
-    number: 2,
-    title: "8-bit Brent–Kung Prefix Adder",
-    subtitle: "Full-custom CMOS with pre-/post-layout verification and RCA comparison",
-    metrics: [
-      { value: "8-bit", label: "WIDTH" },
-      { value: "BK", label: "ARCH" },
-      { value: "DRC/LVS", label: "SIGN-OFF" },
-    ],
-    tags: [
-      "Prefix Adder",
-      "RCA Baseline",
-      "Virtuoso",
-      "Calibre DRC/LVS",
-      "Post-Layout Sim",
-      "HSPICE",
-      "DFF Outputs",
-    ],
-    status: "Design Complete",
-    statusColor: "text-green-600",
-    delay: 350,
-    link: "https://github.com/YOUR_USERNAME/ic-projects-portfolio/tree/main/8-bit%20Brent–Kung%20Prefix%20Adder",
-  },
-  {
-    number: 3,
-    title: "Two-Stage CMOS Operational Amplifier",
-    subtitle: "Device matching + custom layout with stability and robustness verification",
-    metrics: [
-      { value: "2-stage", label: "TOPOLOGY" },
-      { value: "Matching", label: "LAYOUT" },
-      { value: "DRC/LVS", label: "CHECKS" },
-    ],
-    tags: [
-      "Miller Compensation",
-      "Biasing",
-      "CMRR/PSRR",
-      "AC/DC/Tran",
-      "Virtuoso",
-      "Calibre DRC/LVS",
-      "HSPICE/Spectre",
-    ],
-    status: "Design Complete",
-    statusColor: "text-green-600",
-    delay: 500,
-    link: "https://github.com/YOUR_USERNAME/ic-projects-portfolio/tree/main/Two-Stage%20CMOS%20Operational%20Amplifier",
-  },
-  {
-    number: 4,
-    title: "AXI-Lite SPI Virtual EEPROM Controller",
-    subtitle: "Pure-Verilog SPI master + 4 KB EEPROM slave with PS–PL co-verification",
-    metrics: [
-      { value: "4 KB", label: "EEPROM" },
-      { value: "AXI-Lite", label: "BUS" },
-      { value: "Mode 0", label: "SPI" },
-    ],
-    tags: [
-      "Frame Control",
-      "TX/RX FIFO",
-      "Addr Auto-Inc",
-      "Virtual EEPROM",
-      "Register Divider",
-      "Verilog TB",
-      "On-board Test",
-      "PS–PL Co-Verify",
-    ],
-    status: "Verified on Board",
-    statusColor: "text-green-600",
-    delay: 650,
-    link: "https://github.com/YOUR_USERNAME/ic-projects-portfolio/tree/main/AXI-Lite%20SPI%20Virtual%20EEPROM%20Controller",
-  },
-];
+          {
+            number: 1,
+            title: "16×16 6T SRAM Compute-in-Memory",
+            subtitle:
+              "Low-voltage CIM with conditional write-back, WFSC, and synchronous write-assist",
+            metrics: [
+              { value: "16×16", label: "ARRAY" },
+              { value: "≤10 mW", label: "WRITE PWR" },
+              { value: "<10 MHz", label: "FREQ" },
+            ],
+            tags: [
+              "6T SRAM",
+              "CIM",
+              "Conditional Write-Back",
+              "WFSC",
+              "Neg. Bitline Assist",
+              "SA + Compare Array",
+              "TSMC 180nm",
+              "HSPICE/Spectre",
+            ],
+            status: "In Progress",
+            statusColor: "text-amber-600",
+            delay: 200,
+            link:
+              "https://github.com/23sakuracyj/ic-projects-portfolio/tree/main/6T%20SRAM%20CIM%20Array",
+          },
+          {
+            number: 2,
+            title: "8-bit Brent–Kung Prefix Adder",
+            subtitle:
+              "Full-custom CMOS with pre-/post-layout verification and RCA comparison",
+            metrics: [
+              { value: "8-bit", label: "WIDTH" },
+              { value: "BK", label: "ARCH" },
+              { value: "DRC/LVS", label: "SIGN-OFF" },
+            ],
+            tags: [
+              "Prefix Adder",
+              "RCA Baseline",
+              "Virtuoso",
+              "Calibre DRC/LVS",
+              "Post-Layout Sim",
+              "HSPICE",
+              "DFF Outputs",
+            ],
+            status: "Design Complete",
+            statusColor: "text-green-600",
+            delay: 350,
+            // Note: folder name contains an en-dash (–). Keep it URL-encoded.
+            link:
+              "https://github.com/23sakuracyj/ic-projects-portfolio/tree/main/8-bit%20Brent%E2%80%93Kung%20Prefix%20Adder",
+          },
+          {
+            number: 3,
+            title: "Two-Stage CMOS Operational Amplifier",
+            subtitle:
+              "Device matching + custom layout with stability and robustness verification",
+            metrics: [
+              { value: "2-stage", label: "TOPOLOGY" },
+              { value: "Matching", label: "LAYOUT" },
+              { value: "DRC/LVS", label: "CHECKS" },
+            ],
+            tags: [
+              "Miller Compensation",
+              "Biasing",
+              "CMRR/PSRR",
+              "AC/DC/Tran",
+              "Virtuoso",
+              "Calibre DRC/LVS",
+              "HSPICE/Spectre",
+            ],
+            status: "Design Complete",
+            statusColor: "text-green-600",
+            delay: 500,
+            link:
+              "https://github.com/23sakuracyj/ic-projects-portfolio/tree/main/Two-Stage%20CMOS%20Operational%20Amplifier",
+          },
+          {
+            number: 4,
+            title: "AXI-Lite SPI Virtual EEPROM Controller",
+            subtitle:
+              "Pure-Verilog SPI master + 4 KB EEPROM slave with PS–PL co-verification",
+            metrics: [
+              { value: "4 KB", label: "EEPROM" },
+              { value: "AXI-Lite", label: "BUS" },
+              { value: "Mode 0", label: "SPI" },
+            ],
+            tags: [
+              "Frame Control",
+              "TX/RX FIFO",
+              "Addr Auto-Inc",
+              "Virtual EEPROM",
+              "Register Divider",
+              "Verilog TB",
+              "On-board Test",
+              "PS–PL Co-Verify",
+            ],
+            status: "Verified on Board",
+            statusColor: "text-green-600",
+            delay: 650,
+            link:
+              "https://github.com/23sakuracyj/ic-projects-portfolio/tree/main/AXI-Lite%20SPI%20Virtual%20EEPROM%20Controller",
+          },
+        ];
+
         const skills = [
           "Verilog",
           "Verilog-A",
@@ -227,10 +269,12 @@
                   YC
                 </div>
                 <h1 className="text-3xl font-bold text-gray-900">Yijie Chen</h1>
-                <p className="text-gray-500 mt-2">B.S. Electrical Engineering · IC Design Track</p>
+                <p className="text-gray-500 mt-2">
+                  B.S. Electrical Engineering · IC Design Track
+                </p>
                 <p className="text-gray-400 text-sm mt-3 max-w-2xl mx-auto">
-                  Focused on IC design across memory/CIM, full-custom digital, and analog circuits, with schematic-to-layout
-                  verification and transistor-level simulation.
+                  Focused on IC design across memory/CIM, full-custom digital, and analog
+                  circuits, with schematic-to-layout verification and transistor-level simulation.
                 </p>
               </div>
 
@@ -242,7 +286,9 @@
                 >
                   Independent Projects
                 </h2>
-                <div className="text-xs text-gray-400">Ordered for IC applications (Memory → Digital → Analog → Interface)</div>
+                <div className="text-xs text-gray-400">
+                  Ordered for IC applications (Memory → Digital → Analog → Interface)
+                </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
