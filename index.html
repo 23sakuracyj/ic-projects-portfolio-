@@ -128,17 +128,24 @@
           },
           {
             number: 2,
-            title: "Multi-Protocol Async Bridge",
-            subtitle: "UART Bridge with Async FIFO and PLL Clocking",
+            title: "AXI-Lite SPI Virtual EEPROM Controller",
+            subtitle: "Pure-Verilog SPI Master with 4 KB Memory-Mapped EEPROM and PS–PL Co-Verification",
             metrics: [
-              { value: "9600↔115200", label: "Baud" },
-              { value: "2", label: "CDC" },
-              { value: "100 MHz", label: "PLL" }
+             { value: "4 KB", label: "EEPROM" },
+             { value: "32-bit", label: "AXI Data" },
+             { value: "100 MHz", label: "Base CLK" }
             ],
             tags: [
-              "FPGA", "Verilog", "UART",
-              "Async FIFO", "CDC", "PLL",
-              "Post-P&R Sim", "Board Test"
+              "AXI-Lite",
+              "SPI Master",
+              "Virtual EEPROM",
+              "Register-Controlled Divider",
+              "Mode 0",
+              "Pure Verilog",
+              "Custom IP (No Official Core)",
+              "Verilog TB",
+              "PS–PL Co-Verification",
+              "On-board Validation"
             ],
             status: "Verified on Board",
             statusColor: "text-green-600",
