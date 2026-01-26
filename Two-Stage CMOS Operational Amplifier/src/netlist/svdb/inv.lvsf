@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/NBTIC22/cyj2069/analog_design
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {3 0 0 0}
+lvs_LvsOutFile LVS_REPORT inv.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/NBTIC22/cyj2069/analog_design/inv.src.net
+lvs_LvsOutFile RULES_FILE /home/NBTIC22/cyj2069/analog_design/_SmicSPM7PR12R_cal013_mixRF_sali_p1mtx_1233_V2.6_2P.xrc_
+lvs_LvsRunTimes 1766460783 1766460783

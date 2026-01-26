@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      NBTIC22
+HostName                       cad06
+ProcessIdentifier              3079986
+ProcessCreationTime_UTC        1767848733
+ProcessCreationTime_Readable   Thu Jan  8 13:05:33 2026 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/NBTIC22/cyj2069/analog_design/inv/symbol/symbol.oa.cdslck
+TimeEditLocked                 Thu Jan  8 15:20:33 2026 CST

@@ -1,0 +1,14 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "inv"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/NBTIC22/cyj2069/analog_design"
+ )
+( model
+( "analog_design/inv/schematic" "inv" )
+ )
+( "inv" "ihnl/cds0/map" )
+ )

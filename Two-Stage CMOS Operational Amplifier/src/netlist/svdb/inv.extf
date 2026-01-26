@@ -1,0 +1,15 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1766460777 1766460782
+lvs_ExtOutFile RUNDIR /home/NBTIC22/cyj2069/analog_design
+lvs_ExtOutFile RULES_FILE /home/NBTIC22/cyj2069/analog_design/_SmicSPM7PR12R_cal013_mixRF_sali_p1mtx_1233_V2.6_2P.xrc_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoErcSummary {9 0 0 0 0 2 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/NBTIC22/cyj2069/analog_design/svdb/inv.sp
+lvs_ExtOutFile EXTRACTION_REPORT inv.lvs.report.ext
+lvs_ExtOutFile LAYOUT_PDSP {  svdb/inv.pdsp }
+lvs_ExtOutFile ERC_PATHCHK_DATABASE svdb/inv.pathchk.erc
+lvs_ExtOutFile ERC_PATHCHK_REPORT svdb/inv.pathchk.rep
+lvs_ExtOutFile ERC_DATABASE erc.db
+lvs_ExtOutFile ERC_SUMMARY erc.rep

@@ -1,0 +1,229 @@
+* Calibre pushdown separate-properties (back-annotation) data
+***************************************
+*
+* These lvs-actionable properties, indexed by DEVICE element(model) will be kept in the netlist:
+*
+* KEEP_PROP_BEGIN
+* KEEP_PROP D(dnwdio33) A
+* KEEP_PROP D(ndio12) A
+* KEEP_PROP D(ndio33) A
+* KEEP_PROP D(nhvtdio12) A
+* KEEP_PROP D(nlvtdio12) A
+* KEEP_PROP D(ntdio12) A
+* KEEP_PROP D(ntdio33) A
+* KEEP_PROP D(nwdio) A
+* KEEP_PROP D(pdio12) A
+* KEEP_PROP D(pdio33) A
+* KEEP_PROP D(phvtdio12) A
+* KEEP_PROP D(plvtdio12) A
+* KEEP_PROP D(rwdio33) A
+* KEEP_PROP M(C1) L W
+* KEEP_PROP M(C2) L W
+* KEEP_PROP MN(n12) L W
+* KEEP_PROP MN(n33) L W
+* KEEP_PROP MN(nhvt12) L W
+* KEEP_PROP MN(nlvt12) L W
+* KEEP_PROP MN(npd) L W
+* KEEP_PROP MN(npdhs) L W
+* KEEP_PROP MN(npg) L W
+* KEEP_PROP MN(npghs) L W
+* KEEP_PROP MN(nt12) L W
+* KEEP_PROP MN(nt33) L W
+* KEEP_PROP MP(p12) L W
+* KEEP_PROP MP(p33) L W
+* KEEP_PROP MP(phvt12) L W
+* KEEP_PROP MP(pl) L W
+* KEEP_PROP MP(plhs) L W
+* KEEP_PROP MP(plvt12) L W
+* KEEP_PROP R(ralpa) W L
+* KEEP_PROP R(rhrpo) W L
+* KEEP_PROP R(rhrpo_3t) W L
+* KEEP_PROP R(rm1) W L
+* KEEP_PROP R(rm2) W L
+* KEEP_PROP R(rm3) W L
+* KEEP_PROP R(rm4) W L
+* KEEP_PROP R(rm5) W L
+* KEEP_PROP R(rm8) W L
+* KEEP_PROP R(rndif) W L
+* KEEP_PROP R(RNDIF_NW) R
+* KEEP_PROP R(rndifsab) W L
+* KEEP_PROP R(RNDIFSAB_NW) R
+* KEEP_PROP R(rnpo) W L
+* KEEP_PROP R(rnpo_3t) W L
+* KEEP_PROP R(rnposab) W L
+* KEEP_PROP R(rnposab_3t) W L
+* KEEP_PROP R(rnwaa) W L
+* KEEP_PROP R(rnwsti) W L
+* KEEP_PROP R(rpdif) W L
+* KEEP_PROP R(rpdifsab) W L
+* KEEP_PROP R(rppo) W L
+* KEEP_PROP R(rppo_3t) W L
+* KEEP_PROP R(rpposab) W L
+* KEEP_PROP R(rpposab_3t) W L
+* KEEP_PROP diff_ind_3t_alpa_rf R N
+* KEEP_PROP diff_ind_3t_alpa_rf_psub R N
+* KEEP_PROP diff_ind_3t_rf R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t1d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t2 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t2d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t3 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t3d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t4 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t4d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t5d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t6 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_psub_t6d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t1d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t2 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t2d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t3 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t3d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t4 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t4d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t5d5 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t6 R N
+* KEEP_PROP diff_ind_3t_rf_pgs_t6d5 R N
+* KEEP_PROP diff_ind_3t_rf_psub R N
+* KEEP_PROP diff_ind_rf R N
+* KEEP_PROP diff_ind_rf_pgs R N
+* KEEP_PROP diff_ind_rf_pgs_psub R N
+* KEEP_PROP diff_ind_rf_psub R N
+* KEEP_PROP dnw12_4t_ckt W L
+* KEEP_PROP dnw12_ckt W L
+* KEEP_PROP dnw12_ckt_rf WR LR NF
+* KEEP_PROP dnw33_4t_ckt W L
+* KEEP_PROP dnw33_ckt W L
+* KEEP_PROP dnw33_ckt_rf WR LR NF
+* KEEP_PROP dnwhvt12_4t_ckt W L
+* KEEP_PROP dnwhvt12_ckt W L
+* KEEP_PROP dnwlvt12_4t_ckt W L
+* KEEP_PROP dnwlvt12_ckt W L
+* KEEP_PROP ind_rf_pgs_psub_t1d5 R N
+* KEEP_PROP ind_rf_pgs_psub_t2 R N
+* KEEP_PROP ind_rf_pgs_psub_t2d5 R N
+* KEEP_PROP ind_rf_pgs_psub_t3 R N
+* KEEP_PROP ind_rf_pgs_psub_t3d5 R N
+* KEEP_PROP ind_rf_pgs_psub_t4 R N
+* KEEP_PROP ind_rf_pgs_psub_t4d5 R N
+* KEEP_PROP ind_rf_pgs_psub_t5 R N
+* KEEP_PROP ind_rf_pgs_psub_t5d5 R N
+* KEEP_PROP ind_rf_pgs_psub_t6 R N
+* KEEP_PROP ind_rf_pgs_psub_t6d5 R N
+* KEEP_PROP ind_rf_pgs_t1d5 R N
+* KEEP_PROP ind_rf_pgs_t2 R N
+* KEEP_PROP ind_rf_pgs_t2d5 R N
+* KEEP_PROP ind_rf_pgs_t3 R N
+* KEEP_PROP ind_rf_pgs_t3d5 R N
+* KEEP_PROP ind_rf_pgs_t4 R N
+* KEEP_PROP ind_rf_pgs_t4d5 R N
+* KEEP_PROP ind_rf_pgs_t5 R N
+* KEEP_PROP ind_rf_pgs_t5d5 R N
+* KEEP_PROP ind_rf_pgs_t6 R N
+* KEEP_PROP ind_rf_pgs_t6d5 R N
+* KEEP_PROP ind_rf_psub_t1d5 R N
+* KEEP_PROP ind_rf_psub_t2 R N
+* KEEP_PROP ind_rf_psub_t2d5 R N
+* KEEP_PROP ind_rf_psub_t3 R N
+* KEEP_PROP ind_rf_psub_t3d5 R N
+* KEEP_PROP ind_rf_psub_t4 R N
+* KEEP_PROP ind_rf_psub_t4d5 R N
+* KEEP_PROP ind_rf_psub_t5 R N
+* KEEP_PROP ind_rf_psub_t5d5 R N
+* KEEP_PROP ind_rf_psub_t6 R N
+* KEEP_PROP ind_rf_psub_t6d5 R N
+* KEEP_PROP ind_rf_t1d5 R N
+* KEEP_PROP ind_rf_t2 R N
+* KEEP_PROP ind_rf_t2d5 R N
+* KEEP_PROP ind_rf_t3 R N
+* KEEP_PROP ind_rf_t3d5 R N
+* KEEP_PROP ind_rf_t4 R N
+* KEEP_PROP ind_rf_t4d5 R N
+* KEEP_PROP ind_rf_t5 R N
+* KEEP_PROP ind_rf_t5d5 R N
+* KEEP_PROP ind_rf_t6 R N
+* KEEP_PROP ind_rf_t6d5 R N
+* KEEP_PROP mim3_ckt L W
+* KEEP_PROP mim3_rf LR WR
+* KEEP_PROP mom13_ckt L N
+* KEEP_PROP mom14_ckt L N
+* KEEP_PROP mom15_ckt L N
+* KEEP_PROP mom24_ckt L N
+* KEEP_PROP mom25_ckt L N
+* KEEP_PROP mom35_ckt L N
+* KEEP_PROP mom_ckt_rf LR NF BM TM
+* KEEP_PROP mom_ckt_rf_3t LR NF BM TM
+* KEEP_PROP mom_wips_ckt_rf LR NF BM TM
+* KEEP_PROP mom_wips_ckt_rf_3t LR NF BM TM
+* KEEP_PROP n12_ckt_rf WR LR NF
+* KEEP_PROP n12_mis_ckt L W
+* KEEP_PROP n33_ckt_rf WR LR NF
+* KEEP_PROP n33_mis_ckt L W
+* KEEP_PROP p12_ckt_rf WR LR NF
+* KEEP_PROP p12_mis_ckt L W
+* KEEP_PROP p33_ckt_rf WR LR NF
+* KEEP_PROP p33_mis_ckt L W
+* KEEP_PROP pvar12_ckt WR LR NF
+* KEEP_PROP pvar12_ckt_rf WR LR NF
+* KEEP_PROP pvar33_ckt WR LR NF
+* KEEP_PROP pvar33_ckt_rf WR LR NF
+* KEEP_PROP pvardio12_ckt_rf WR LR NF
+* KEEP_PROP pvardio33_ckt_rf WR LR NF
+* KEEP_PROP ralpa_ckt W L
+* KEEP_PROP ralpa_rf W L
+* KEEP_PROP rf_3Tdiff_1talpa_psub_t1 R N
+* KEEP_PROP rf_3Tdiff_1talpa_psub_t2 R N
+* KEEP_PROP rf_3Tdiff_1talpa_psub_t3 R N
+* KEEP_PROP rf_3Tdiff_1talpa_psub_t4 R N
+* KEEP_PROP rf_3Tdiff_1talpa_psub_t5 R N
+* KEEP_PROP rf_3Tdiff_1talpa_psub_t6 R N
+* KEEP_PROP rf_3Tdiff_1talpa_psub_t7 R N
+* KEEP_PROP rf_3Tdiff_1talpa_t1 R N
+* KEEP_PROP rf_3Tdiff_1talpa_t2 R N
+* KEEP_PROP rf_3Tdiff_1talpa_t3 R N
+* KEEP_PROP rf_3Tdiff_1talpa_t4 R N
+* KEEP_PROP rf_3Tdiff_1talpa_t5 R N
+* KEEP_PROP rf_3Tdiff_1talpa_t6 R N
+* KEEP_PROP rf_3Tdiff_1talpa_t7 R N
+* KEEP_PROP rhrpo_3t_ckt W L
+* KEEP_PROP rhrpo_ckt W L
+* KEEP_PROP rhrpo_ckt_rf L W
+* KEEP_PROP rhrpo_ckt_rf_3t L W
+* KEEP_PROP rm1_ckt W L
+* KEEP_PROP rm2_ckt W L
+* KEEP_PROP rm3_ckt W L
+* KEEP_PROP rm4_ckt W L
+* KEEP_PROP rm5_ckt W L
+* KEEP_PROP rm8_ckt W L
+* KEEP_PROP rndif_ckt W L
+* KEEP_PROP rndifsab_ckt W L
+* KEEP_PROP rndifsab_ckt_rf L W
+* KEEP_PROP rnpo_3t_ckt W L
+* KEEP_PROP rnpo_ckt W L
+* KEEP_PROP rnposab_3t_ckt W L
+* KEEP_PROP rnposab_ckt W L
+* KEEP_PROP rnposab_ckt_rf L W
+* KEEP_PROP rnposab_ckt_rf_3t L W
+* KEEP_PROP rnwaa_ckt W L
+* KEEP_PROP rnwsti_ckt W L
+* KEEP_PROP rpdif_ckt W L
+* KEEP_PROP rpdifsab_ckt W L
+* KEEP_PROP rpdifsab_ckt_rf L W
+* KEEP_PROP rppo_3t_ckt W L
+* KEEP_PROP rppo_ckt W L
+* KEEP_PROP rpposab_3t_ckt W L
+* KEEP_PROP rpposab_ckt W L
+* KEEP_PROP rpposab_ckt_rf L W
+* KEEP_PROP rpposab_ckt_rf_3t L W
+* KEEP_PROP rtm2_rf W L
+* KEEP_PROP spi_ind_rf_1p2 R
+* KEEP_PROP spi_ind_rf_1p3 R
+* KEEP_PROP spi_ind_rf_psub_1p2 R
+* KEEP_PROP spi_ind_rf_psub_1p3 R
+* KEEP_PROP_END
+*
+.SUBCKT inv
+* nothing transcripted
+.ENDS
+***************************************

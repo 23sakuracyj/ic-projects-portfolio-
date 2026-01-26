@@ -1,0 +1,8 @@
+//OK 
+//NUMBER_OF_HEADER_LINES: 6
+//VERSION: 1
+//TOKEN_DELIMITER: "
+//TOKEN_SEPARATOR: " "
+//FORMAT: "time" "calibre version" "command line"
+"Tue Dec 23 11:33:06 2025 " "v2016.2_26.21" "-xrc -pdb -rcc -turbo 1 /home/NBTIC22/cyj2069/analog_design/_SmicSPM7PR12R_cal013_mixRF_sali_p1mtx_1233_V2.6_2P.xrc_"
+"Tue Dec 23 11:33:09 2025 " "v2016.2_26.21" "-xrc -fmt -all /home/NBTIC22/cyj2069/analog_design/_SmicSPM7PR12R_cal013_mixRF_sali_p1mtx_1233_V2.6_2P.xrc_"
